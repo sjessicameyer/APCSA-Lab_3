@@ -1,5 +1,5 @@
 //Add functions to file: customMath customMath = new customMath();
-package SarahLibrary;
+//package SarahLibrary;
 public class customMath{
 
   public customMath(){

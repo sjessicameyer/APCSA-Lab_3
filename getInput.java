@@ -1,5 +1,5 @@
 //Add functions to file: getInput getInput = new getInput();
-package SarahLibrary;
+//package SarahLibrary;
 import java.util.Scanner;
 
 public class getInput{

@@ -1,9 +1,9 @@
 //Add functions to file: customArrays customArrays = new customArrays();
-package SarahLibrary;
+//package SarahLibrary;
 
 public class customArrays{
-  getInput getInput = new getInput();
-  customMath customMath = new customMath();
+  getInput getInput  = new getInput();
+  customMath customMath  = new customMath();
   
   public customArrays(){
 
@@ -80,18 +80,7 @@ public class customArrays{
   }
 
   public void display(int[] array){
-    /*System.out.print("\nsize of array: "+array.length);
-
-    System.out.print("\narray positions:");
-    for (var i = 0; i < array.length; i++){
-      for (var x = 0; x<4-customMath.countLength(i);x++){
-        System.out.print(" ");
-      }
-      System.out.print(" "+i);
-    }
-  
-    System.out.print("\narray entries:  ");
-  */
+   
   System.out.println();
     for (var i = 0; i < array.length; i++){
       for (var x = 0; x<4-customMath.countLength(array[i]);x++){

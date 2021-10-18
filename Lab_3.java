@@ -6,11 +6,11 @@
 		Title:
 		Purpose:
 */
-import SarahLibrary.*;
+//import SarahLibrary.*;
 
 public class Lab_3{
 
-   customArrays customArrays = new customArrays();
+   customArrays customArrays2 = new customArrays();
 
   public Lab_3(){
     int[] array = new int[(int)(Math.random()*21+30)];
@@ -19,7 +19,7 @@ public class Lab_3{
       array[i]=(int)(Math.random()*201-100);
     }
 
-    customArrays.display(array);
+    customArrays2.display(array);
   }
 
 }
