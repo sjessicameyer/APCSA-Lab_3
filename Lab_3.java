@@ -10,16 +10,49 @@
 
 public class Lab_3{
 
-   customArrays customArrays2 = new customArrays();
+   customArrays customArrays = new customArrays();
 
   public Lab_3(){
     int[] array = new int[(int)(Math.random()*21+30)];
     
+
     for (var i = 0; i < array.length; i++){
       array[i]=(int)(Math.random()*201-100);
     }
+  
+    customArrays.display(array);
 
-    customArrays2.display(array);
+    array = sortArray(array);
+
+    customArrays.display(array);
   }
 
+  public int[] sortArray(int[] array){
+    
+    int[] revisedArray = customArrays.copyArray(array);
+    
+    for (var x = 0;x<array.length;x++){
+      revisedArray=smallestAfterN(revisedArray, x);
+    }
+
+    return revisedArray;
+  }
+
+  public int[] smallestAfterN(int[] array, int n){
+    int smallestItemPosition=0;
+
+    for (int i=n; i<array.length; i++){
+      if (array[i]<array[smallestItemPosition]){
+        smallestItemPosition=i;
+      }
+    }
+
+    int[] revisedArray = new int[0];
+    revisedArray= customArrays.copyArray(array);
+    
+    revisedArray[n]=array[smallestItemPosition];
+    revisedArray[smallestItemPosition]=array[n];
+
+    return revisedArray;
+  }
 }

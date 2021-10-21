@@ -83,13 +83,14 @@ public class customArrays{
    
   System.out.println();
     for (var i = 0; i < array.length; i++){
+      if (i%10==0){
+        System.out.println();
+      }
+      
       for (var x = 0; x<4-customMath.countLength(array[i]);x++){
         System.out.print(" ");
       }
       System.out.print(" "+array[i]);
-      if (i%10==0){
-        System.out.println();
-      }
     }
 
     System.out.print("\n\n");
