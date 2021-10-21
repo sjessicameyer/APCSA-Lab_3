@@ -25,6 +25,12 @@ public class Lab_3{
     array = sortArray(array);
 
     customArrays.display(array);
+
+    System.out.println("The mean is: "+mean(array));
+    System.out.println("The median is: "+median(array));
+    System.out.println("The Mode is: "+mode(array));
+    System.out.println("The range is: "+range(array));
+    System.out.println("The Standard Deviation is: "+standardDeviation(array));
   }
 
   public int[] sortArray(int[] array){
@@ -54,5 +60,39 @@ public class Lab_3{
     revisedArray[smallestItemPosition]=array[n];
 
     return revisedArray;
+  }
+
+  public double mean(int[] array){
+    int total=0;
+    int sampleSize=0;
+    double average=0;
+
+    for (var i=0;i<array.length;i++){
+      total= total+array[i];
+      sampleSize++;
+    }
+
+    average=total/sampleSize;
+    return average;
+  }
+
+  public double median(int[] array){
+    if(array.length%2==1){
+      return (array[array.length/2]+array[array.length/2+1])/2;
+    }else{
+      return array[array.length/2];
+    }
+  }
+
+  public int mode(int[] array){
+    return -1;
+  }
+
+  public double range(int[] array){
+    return -1.0;
+  }
+
+  public double standardDeviation(int[] array){
+    return -1.0;
   }
 }
